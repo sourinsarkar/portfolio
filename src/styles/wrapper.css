@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply text-pri-700;
+}
+
 nav {
     @apply rounded-full p-1 border-pri-50 ring-1 ring-pri-50 shadow-lg;
 }
 
 .NavList li {
-    @apply bg-pri-50/30 rounded-full border border-pri-50 p-3.5 cursor-pointer hover:shadow-inner;
+    @apply bg-pri-50/30 rounded-full border border-pri-50 p-3.5 cursor-pointer hover:shadow-is1;
 }
 
 .NavList li * {

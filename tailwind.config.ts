@@ -23,6 +23,9 @@ const config: Config = {
           "900": "#121416",
           "1000": "#0A0C0D",
         },
+      },
+      boxShadow: {
+        'is1': 'inset 0 0 12px rgba(0, 0, 0, 0.2)',
       }
     },
   },
