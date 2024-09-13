@@ -1,8 +1,10 @@
-import { RiTimeFill } from "@remixicon/react";
+"use client";
 
+import { RiTimeFill } from "@remixicon/react";
+  
 export default function Home() {
     return (
-        <div className="border border-pri-200 mt-12 rounded-3xl py-6">
+        <div>
             <section className="flex flex-col items-center">
                 <div className="font-semibold flex flex-col items-center space-y-2">
                     <p className="flex items-center"><RiTimeFill size={16} /> 12:05 PM</p>
