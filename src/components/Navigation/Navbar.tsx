@@ -5,7 +5,7 @@ export function Navbar() {
     return (
         <nav className="inline-block fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
             <ul className="flex items-center NavList space-x-2">
-                <li>    <RiHome4Line size={iconSize} /> </li>
+                <li><RiHome4Line size={iconSize} /> </li>
                 <li><RiBrushLine size={iconSize} /> </li>
                 <li><RiLightbulbFlashLine size={iconSize} /> </li>
                 <li><RiGithubLine size={iconSize} /> </li>

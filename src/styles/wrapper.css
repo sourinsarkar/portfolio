@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply text-pri-700;
+    @apply text-pri-700 antialiased;
 }
 
 nav {
@@ -17,6 +17,10 @@ nav {
 .NavList li * {
     @apply text-pri-400;
 }
+
+/* .IconList li * {
+    @apply 
+} */
 
 /* .custom-svg-border {
     position: relative;
