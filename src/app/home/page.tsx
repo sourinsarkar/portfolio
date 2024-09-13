@@ -46,13 +46,13 @@ export default function Home() {
 
             <section className="flex justify-center">
                 <div className="flex items-center space-x-3">
-                    <Link href="https://google.com">
+                    <a href="https://google.com">
                         <button className="flex items-center rounded-full bg-pri-700 gap-0.5 text-white py-2 pl-5 pr-2.5 font-medium text-sm">
                             View Resume <span><RiArrowRightSLine size={20} /></span>
                         </button>
-                    </Link>
+                    </a>
                     <div className="h-10 w-px bg-pri-50"></div>
-                    <Link href="https://google.com" className="text-[#00A12D] flex items-center gap-1.5">Open to opportnities <span><ArrowTopRightOnSquareIcon className="size-5"/> </span> </Link>
+                    <a target="_blank" href="mailto:work@sourin.in" className="text-[#00A12D] flex items-center gap-1.5">Open to opportnities <span><ArrowTopRightOnSquareIcon className="size-5"/> </span> </a>
                 </div>
             </section>
         </div>
