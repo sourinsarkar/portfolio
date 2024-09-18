@@ -7,11 +7,13 @@ export const DashedBox = ({ children }: { children: ReactNode }) => {
     useEffect(() => {
         if(!contentRef.current) return;
 
+        const currentContentRef = contentRef.current;
+
         const updateDimensions = () => {
-            if(contentRef.current) {
+            if(currentContentRef) {
                 setDimensions({
-                    width: contentRef.current.offsetWidth,
-                    height: contentRef.current.offsetHeight,
+                    width: currentContentRef.offsetWidth,
+                    height: currentContentRef.offsetHeight,
                 });
             };
         };
@@ -20,11 +22,11 @@ export const DashedBox = ({ children }: { children: ReactNode }) => {
         updateDimensions();
 
         const resizeObserver = new ResizeObserver(updateDimensions);
-        resizeObserver.observe(contentRef.current);
+        resizeObserver.observe(currentContentRef);
 
         return () => {
-            if(contentRef.current) {
-                resizeObserver.unobserve(contentRef.current);
+            if(currentContentRef) {
+                resizeObserver.unobserve(currentContentRef);
             };
         };
     }, []);

@@ -29,6 +29,7 @@ export default function Home() {
             const timeString = now.toLocaleTimeString("en-US", options);
             const [hour, minute, secondAndPeriod] = timeString.split(":");
             const [second, period] = secondAndPeriod.split(" ");
+            console.log(second);
 
             setHour(hour.padStart(2, '0'));
             setMinute(minute.padStart(2, '0'));
