@@ -14,7 +14,8 @@ import FigmaIcon from "../../../public/icons/figmaicon.svg";
 import Image from "next/image";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import { useEffect, useState } from "react";
-import { DashedBox } from "@/components/Navigation/DashedBox";
+import { DashedBox } from "@/components/Navigation/DashedBorders";
+import { DashedLine } from "@/components/Navigation/DashedBorders";
 
 export default function Home() {
     const [hour, setHour] = useState("");
@@ -40,27 +41,26 @@ export default function Home() {
 
         const timer = setInterval(updateTime, 1000);
         return () => clearInterval(timer);
-
-        // Disable ESLint rule for the effect
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const iconWidth = 40;
     const iconHeight = 40;
     return (
-        <DashedBox>
-            <div className="space-y-16">
-                <section className="flex flex-col items-center">
+        <DashedBox className="mt-12">
+            <div>
+                <section className="flex flex-col items-center text-center py-7">
                     <div className="font-semibold flex flex-col items-center space-y-4">
                         <p className="flex items-center text-sm leading-none"><RiTimeFill size={16} /> {hour}:{minute} {period}</p>
                         <h1 className="text-6xl tracking-tight">Sourin Sarkar</h1>
                     </div>
                     <p className="text-lg mt-5">Hi there, I’m a developer and designer based in Bengaluru, India.</p>
-                    <p className="text-lg text-center text-pri-400 mt-8 max-w-[600px]">Currently I’m building <span className="text-pri-700">software products</span>. Previously, I’ve worked in a startup as a <span className="text-pri-700">Frontend Developer</span>. Moreover, I <span className="text-pri-700">teach programming</span> and <span className="text-pri-700">design</span> on Discord groups and help people resolve their issues in code.</p>
+                    <p className="text-lg text-pri-400 mt-8 max-w-[600px]">Currently I’m building <span className="text-pri-700">software products</span>. Previously, I’ve worked in a startup as a <span className="text-pri-700">Frontend Developer</span>. Moreover, I <span className="text-pri-700">teach programming</span> and <span className="text-pri-700">design</span> on Discord groups and help people resolve their issues in code.</p>
                 </section>
 
-                <section className="flex justify-center">
-                    <ul className="flex space-x-14">
+                <DashedLine orientation="horizontal" className="" />
+
+                <section className="flex justify-center py-7">
+                    <ul className="flex space-x-16">
                         <li><Image src={NextIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
                         <li><Image src={ReactIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
                         <li><Image src={TailwindIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
@@ -73,8 +73,10 @@ export default function Home() {
                         <li><Image src={FigmaIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
                     </ul>
                 </section>
-
-                <section className="flex justify-center">
+                
+                <DashedLine orientation="horizontal" className="" />
+                
+                <section className="flex justify-center py-7">
                     <div className="flex items-center space-x-3">
                         <a href="https://google.com">
                             <button className="flex items-center rounded-full bg-pri-700 gap-0.5 text-white py-2 pl-5 pr-2.5 font-medium text-sm">
