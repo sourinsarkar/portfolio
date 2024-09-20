@@ -46,7 +46,7 @@ export default function Home() {
     const iconWidth = 40;
     const iconHeight = 40;
     return (
-        <DashedBox className="mt-12">
+        <DashedBox className="mt-4 xl:mt-12">
             <div>
                 <section className="flex flex-col items-center text-center py-7">
                     <div className="font-semibold flex flex-col items-center space-y-4">
