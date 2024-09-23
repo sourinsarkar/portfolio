@@ -46,15 +46,15 @@ export default function Home() {
     const iconWidth = 40;
     const iconHeight = 40;
     return (
-        <DashedBox className="mt-4 xl:mt-12">
+        <DashedBox className="mt-4 md:mt-12">
             <div>
-                <section className="flex flex-col items-center text-center py-7">
+                <section className="flex flex-col items-center text-center py-7 mx-2">
                     <div className="font-semibold flex flex-col items-center space-y-4">
-                        <p className="flex items-center text-sm leading-none"><RiTimeFill size={16} /> {hour}:{minute} {period}</p>
-                        <h1 className="text-6xl tracking-tight">Sourin Sarkar</h1>
+                        <p className="flex items-center text-xs xl:text-sm leading-none"><RiTimeFill size={16} /> {hour}:{minute} {period}</p>
+                        <h1 className="text-5xl xl:text-6xl tracking-tight">Sourin Sarkar</h1>
                     </div>
-                    <p className="text-lg mt-5">Hi there, I’m a developer and designer based in Bengaluru, India.</p>
-                    <p className="text-lg text-pri-400 mt-8 max-w-[600px]">Currently I’m building <span className="text-pri-700">software products</span>. Previously, I’ve worked in a startup as a <span className="text-pri-700">Frontend Developer</span>. Moreover, I <span className="text-pri-700">teach programming</span> and <span className="text-pri-700">design</span> on Discord groups and help people resolve their issues in code.</p>
+                    <p className="xl:text-lg mt-5">Hi there, I’m a developer and designer based in Bengaluru, India.</p>
+                    <p className="xl:text-lg text-pri-400 mt-8 max-w-[600px]">Currently I’m building <span className="text-pri-700">software products</span>. Previously, I’ve worked in a startup as a <span className="text-pri-700">Frontend Developer</span>. Moreover, I <span className="text-pri-700">teach programming</span> and <span className="text-pri-700">design</span> on Discord groups and help people resolve their issues in code.</p>
                 </section>
 
                 <DashedLine orientation="horizontal" className="" />
@@ -77,13 +77,13 @@ export default function Home() {
                 <DashedLine orientation="horizontal" className="" />
                 
                 <section className="flex justify-center py-7">
-                    <div className="flex items-center space-x-3">
-                        <a href="https://google.com">
+                    <div className="md:flex items-center md:space-x-3 ">
+                        <a href="https://google.com" className="flex justify-center items-center">
                             <button className="flex items-center rounded-full bg-pri-700 gap-0.5 text-white py-2 pl-5 pr-2.5 font-medium text-sm">
                                 View Resume <span><RiArrowRightSLine size={20} /></span>
                             </button>
                         </a>
-                        <div className="h-10 w-px bg-pri-50"></div>
+                        <div className="hidden md:flex h-10 w-px bg-pri-50"></div>
                         <a target="_blank" href="mailto:work@sourin.in" className="text-[#00A12D] flex items-center gap-1.5">Open to opportnities <span><ArrowTopRightOnSquareIcon className="size-5"/> </span> </a>
                     </div>
                 </section>

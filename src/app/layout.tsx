@@ -16,8 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="mx-4 xl:mx-12">
-        {children}
+      <body className="mx-4 md:mx-12">
+        <main className="pb-24">
+          {children}
+        </main>
         <Navbar />
       </body>
     </html>
