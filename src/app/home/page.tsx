@@ -43,35 +43,57 @@ export default function Home() {
         return () => clearInterval(timer);
     }, []);
 
+    const icons = [
+        {src: NextIcon, alt: "Next JS"},
+        {src: ReactIcon, alt: "React JS"},
+        {src: TailwindIcon, alt: "Tailwind CSS"},
+        {src: NodeIcon, alt: "Node JS"},
+        {src: PGIcon, alt: "PostgreSQL"},
+        {src: GitIcon, alt: "Git"},
+        {src: GithubIcon, alt: "Github"},
+        {src: CppIcon, alt: "C++"},
+        {src: PythonIcon, alt: "Python"},
+        {src: FigmaIcon, alt: "Figma"}
+    ];
+
     const iconWidth = 40;
     const iconHeight = 40;
+
+    const scrollers = document.querySelectorAll(".scroller");
+    if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
+    }
+
+    function addAnimation() {
+        scrollers.forEach(scroller => {
+            scroller.setAttribute("data-animated", true.toString());
+        });
+    }
+
     return (
         <DashedBox className="mt-4 md:mt-12">
             <div>
                 <section className="flex flex-col items-center text-center py-7 mx-2">
                     <div className="font-semibold flex flex-col items-center space-y-4">
-                        <p className="flex items-center text-xs xl:text-sm leading-none"><RiTimeFill size={16} /> {hour}:{minute} {period}</p>
-                        <h1 className="text-5xl xl:text-6xl tracking-tight">Sourin Sarkar</h1>
+                        <p className="flex items-center text-xs lg:text-sm leading-none"><RiTimeFill size={16} /> {hour}:{minute} {period}</p>
+                        <h1 className="text-5xl lg:text-6xl tracking-tight">Sourin Sarkar</h1>
                     </div>
-                    <p className="xl:text-lg mt-5">Hi there, I’m a developer and designer based in Bengaluru, India.</p>
-                    <p className="xl:text-lg text-pri-400 mt-8 max-w-[600px]">Currently I’m building <span className="text-pri-700">software products</span>. Previously, I’ve worked in a startup as a <span className="text-pri-700">Frontend Developer</span>. Moreover, I <span className="text-pri-700">teach programming</span> and <span className="text-pri-700">design</span> on Discord groups and help people resolve their issues in code.</p>
+                    <p className="lg:text-lg mt-5">Hi there, I’m a developer and designer based in Bengaluru, India.</p>
+                    <p className="lg:text-lg text-pri-400 mt-8 max-w-[600px]">Currently I’m building <span className="text-pri-700">software products</span>. Previously, I’ve worked in a startup as a <span className="text-pri-700">Frontend Developer</span>. Moreover, I <span className="text-pri-700">teach programming</span> and <span className="text-pri-700">design</span> on Discord groups and help people resolve their issues in code.</p>
                 </section>
 
                 <DashedLine orientation="horizontal" className="" />
 
                 <section className="flex justify-center py-7">
-                    <ul className="flex space-x-16">
-                        <li><Image src={NextIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
-                        <li><Image src={ReactIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
-                        <li><Image src={TailwindIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
-                        <li><Image src={NodeIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
-                        <li><Image src={PGIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
-                        <li><Image src={GitIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
-                        <li><Image src={GithubIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
-                        <li><Image src={CppIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
-                        <li><Image src={PythonIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
-                        <li><Image src={FigmaIcon} width={iconWidth} height={iconHeight} alt="Icon" /></li>
-                    </ul>
+                    <div className="max-w-4xl scroller">
+                        <ul className="flex flex-wrap gap-12 scroller-inner">
+                            {[...icons, ...icons].map((icon, index) => (
+                                <li key={index} className="flex-shrink-0">
+                                    <Image src={icon.src} width={iconWidth} height={iconHeight} alt={icon.alt} />      
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </section>
                 
                 <DashedLine orientation="horizontal" className="" />

@@ -25,7 +25,7 @@ const config: Config = {
         },
       },
       boxShadow: {
-        'is1': 'inset 0 0 12px rgba(0, 0, 0, 0.2)',
+        'is1': 'inset 0 4px 4px rgba(0, 0, 0, 0.2)',
       }
     },
   },
