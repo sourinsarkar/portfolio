@@ -2,7 +2,7 @@
 
 import { RiArrowUpSLine, RiBrushLine, RiGithubLine, RiHome4Line, RiLightbulbFlashLine, RiMailLine, RiMoonLine, RiTwitterLine } from "@remixicon/react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 export function Navbar() {
@@ -20,8 +20,8 @@ export function Navbar() {
     return (
         <nav className="inline-block fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
             <ul className="flex items-center NavList space-x-2">
-                <li className={`${isActive('/home') ? 'shadow-is1' : ''}`} onClick={() => window.location.href = "/home"}>
-                    <Link href="/home" onClick={(e) => e.stopPropagation()}><RiHome4Line size={iconSize} /></Link>
+                <li className={`${isActive('/') ? 'shadow-is1' : ''}`} onClick={() => window.location.href = "/home"}>
+                    <Link href="/" onClick={(e) => e.stopPropagation()}><RiHome4Line size={iconSize} /></Link>
                 </li>
                 
                 <li onClick={() => window.open("https://dribbble.com/sourinsarkar", "_blank", "noopener noreferrer")}>
