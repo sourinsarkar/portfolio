@@ -18,7 +18,13 @@ nav {
     @apply text-pri-400;
 }
 
+.scroller {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
 .scroller[data-animated="true"] {
+    opacity: 1;
     overflow: hidden;
     -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
@@ -32,6 +38,15 @@ nav {
 
 @keyframes scroll {
     to {
-        transform: translate(-50%)
+        transform: translate(-50%);
     }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }

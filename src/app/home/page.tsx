@@ -59,16 +59,19 @@ export default function Home() {
     const iconWidth = 40;
     const iconHeight = 40;
 
-    const scrollers = document.querySelectorAll(".scroller");
-    if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        addAnimation();
-    }
+    useEffect(() => {
+        const scrollers = document.querySelectorAll(".scroller");
+    
+        if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation();
+        }
 
-    function addAnimation() {
-        scrollers.forEach(scroller => {
-            scroller.setAttribute("data-animated", true.toString());
-        });
-    }
+        function addAnimation() {
+            scrollers.forEach(scroller => {
+                scroller.setAttribute("data-animated", true.toString());
+            });
+        }
+    },[]);
 
     return (
         <DashedBox className="mt-4 md:mt-12">
@@ -100,12 +103,12 @@ export default function Home() {
                 
                 <section className="flex justify-center py-7">
                     <div className="sm:flex space-y-3 sm:space-y-0 items-center sm:space-x-3 ">
-                        <a href="https://google.com" className="flex justify-center items-center">
+                        <a target="_blank" href="/docs/resume.pdf" className="flex justify-center items-center">
                             <button className="flex items-center rounded-full bg-pri-700 gap-0.5 text-white py-2 pl-5 pr-2.5 font-medium text-sm">
                                 View Resume <span><RiArrowRightSLine size={20} /></span>
                             </button>
                         </a>
-                        <div className="hidden sm:flex h-10 w-px bg-pri-50"></div>
+                        <div className="hidden sm:flex h-10 w-px bg-pri-200"></div>
                         <a target="_blank" href="mailto:work@sourin.in" className="text-[#00A12D] flex items-center gap-1.5">Open to opportnities <span><ArrowTopRightOnSquareIcon className="size-5"/> </span> </a>
                     </div>
                 </section>
