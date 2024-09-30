@@ -103,7 +103,7 @@ export default function Home() {
                 
                 <section className="flex justify-center py-7">
                     <div className="sm:flex space-y-3 sm:space-y-0 items-center sm:space-x-3 ">
-                        <a target="_blank" href="/docs/resume.pdf" className="flex justify-center items-center">
+                        <a target="_blank" href="resume.pdf" className="flex justify-center items-center">
                             <button className="flex items-center rounded-full bg-pri-700 gap-0.5 text-white py-2 pl-5 pr-2.5 font-medium text-sm">
                                 View Resume <span><RiArrowRightSLine size={20} /></span>
                             </button>
