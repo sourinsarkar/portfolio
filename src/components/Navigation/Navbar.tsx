@@ -49,8 +49,8 @@ export function Navbar() {
             </ul>
 
             <ul className={`NavList rounded-full p-1 border-pri-50 ring-1 ring-pri-50 bg-white space-y-2 absolute right-0 bottom-16 ${visibility ? "block" : "hidden" }`}>
-                <li onClick={() => window.open("https://x.com/sourin_inc", "_blank", "noopener noreferrer")}>
-                    <a target="_blank" href="https://x.com/sourin_inc" onClick={(e) => e.stopPropagation()}><RiTwitterLine size={iconSize} /></a>
+                <li onClick={() => window.open("https://x.com/suresourin", "_blank", "noopener noreferrer")}>
+                    <a target="_blank" href="https://x.com/suresourin" onClick={(e) => e.stopPropagation()}><RiTwitterLine size={iconSize} /></a>
                 </li>
                 
                 <li onClick={() => window.open("mailto:work@sourin.in", "_blank", "noopener noreferrer")}>
